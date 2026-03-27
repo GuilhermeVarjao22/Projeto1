@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 370px;
+    width: 100%;
+    background: #fff;
+    border-radius: 24px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Faixa azul no topo */
+.profile-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 36%;
+    width: 100%;
+    border-radius: 24px 24px 0 0;
+    background-color: #4070f4;
+    z-index: 0;
+}
+
+/* Estilização da Imagem */
+.image {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: #4070f4;
+    padding: 3px;
+    z-index: 1;
+}
+
+.image .profile-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+/* Textos */
+.text-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+    margin-top: 10px;
+}
+
+.name {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.job {
+    font-size: 15px;
+    font-weight: 400;
+    color: #777;
+}
+
+/* Ícones de Redes Sociais */
+.media-buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.media-buttons .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #f44040;
+    height: 34px;
+    width: 34px;
+    font-size: 18px;
+    border-radius: 50%;
+    margin: 0 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.media-buttons .link:hover {
+    background-color: #263af2;
+    transform: scale(1.1);
+}
+
+/* Botões Principais */
+.buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.buttons .button {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    border-radius: 24px;
+    margin: 0 10px;
+    padding: 8px 24px;
+    background-color: #4070f4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.buttons .button:hover {
+    background-color: #f22626;
+}
+
+/* Analytics (Números) */
+.analytics {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.analytics .data {
+    display: flex;
+    align-items: center;
+    color: #333;
+    padding: 0 15px;
+    border-right: 2px solid #e7e7e7;
+}
+
+.analytics .data:last-child {
+    border-right: none;
+}
+
+.analytics .data i {
+    font-size: 18px;
+    margin-right: 6px;
+    color: #4070f4;
+}
+
+.analytics .number {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Estilo base para todos os círculos de ícones */
+.media-buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.media-buttons .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    height: 38px;
+    width: 38px;
+    font-size: 20px;
+    border-radius: 50%;
+    margin: 0 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Cores Específicas das Marcas */
+.link.facebook {
+    background-color: #1877F2;
+}
+
+.link.twitter {
+    background-color: #1DA1F2;
+}
+
+.link.instagram {
+    /* Gradiente oficial do Instagram */
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.link.youtube {
+    background-color: #FF0000;
+}
+
+/* Efeito de Hover: aumenta o tamanho e brilha levemente */
+.media-buttons .link:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
